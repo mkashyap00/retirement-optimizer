@@ -1,0 +1,37 @@
+{
+  "household": {
+    "filing_status": "joint",
+    "self_birth_date": "1963-07-01",
+    "spouse_birth_date": "1966-04-01",
+    "state": "CA",
+    "nickname": "Synthetic salaried couple",
+    "self_death_age": 92,
+    "spouse_death_age": 94
+  },
+  "accounts": [
+    {"account_type": "taxable", "owner": "joint", "balance": 600000, "basis": 420000},
+    {"account_type": "traditional", "owner": "self", "balance": 1400000},
+    {"account_type": "traditional", "owner": "spouse", "balance": 300000},
+    {"account_type": "roth", "owner": "spouse", "balance": 120000, "roth_opened_year": 2018}
+  ],
+  "income": [
+    {"category": "salary", "owner": "self", "amount": 120000, "start_year": 2026, "end_year": 2027},
+    {"category": "salary", "owner": "spouse", "amount": 70000, "start_year": 2026, "end_year": 2029}
+  ],
+  "settings": {
+    "required_spending": 110000,
+    "inflation": 0.025,
+    "nominal_return": 0.06,
+    "ss_pia_self": 3600,
+    "ss_claim_age_self": 68,
+    "ss_pia_spouse": 2100,
+    "ss_claim_age_spouse": 66,
+    "heir_tax_rate": 0.25,
+    "spending_rule": "fixed"
+  },
+  "constraints": {
+    "irmaa_policy": "soft",
+    "conversion_window": "anytime",
+    "marginal_rate_limit": "0.22"
+  }
+}

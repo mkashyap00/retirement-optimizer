@@ -1,0 +1,40 @@
+{
+  "household": {
+    "filing_status": "joint",
+    "self_birth_date": "1963-03-01",
+    "spouse_birth_date": "1965-06-01",
+    "state": "CA",
+    "self_death_age": 92,
+    "spouse_death_age": 90
+  },
+  "accounts": [
+    {
+      "account_type": "taxable",
+      "owner": "joint",
+      "balance": 500000,
+      "basis": 350000
+    },
+    {
+      "account_type": "traditional",
+      "owner": "self",
+      "balance": 1800000
+    },
+    {
+      "account_type": "roth",
+      "owner": "self",
+      "balance": 200000
+    }
+  ],
+  "income": [],
+  "settings": {
+    "required_spending": 130000,
+    "ss_pia_self": 4000,
+    "ss_claim_age_self": 67,
+    "ss_pia_spouse": 2400,
+    "ss_claim_age_spouse": 67
+  },
+  "constraints": {
+    "irmaa_policy": "soft",
+    "conversion_window": "anytime"
+  }
+}

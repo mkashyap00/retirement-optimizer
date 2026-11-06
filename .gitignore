@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/.next/
+frontend/out/
+
+# Data & env
+*.db
+*.duckdb
+*.wal
+.env
+.env.local
+for_codex_review.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+# Local user testing notes (never commit)
+user_test/
+frontend/tsconfig.tsbuildinfo
+
+# Generated report exports (server-side timestamped copies).
+# Root-anchored: must NOT match backend/src/reports/ (source code).
+/reports/
+docs/PROJECT_REVIEW.md

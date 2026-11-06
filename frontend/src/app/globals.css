@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Private-banker palette (light default) ────────────────────────── */
+    --background:           47 42% 92%;    /* warm cream */
+    --foreground:          165 45% 12%;    /* deep emerald near-black */
+
+    --card:                 47 40% 97%;    /* warm off-white */
+    --card-foreground:     165 45% 12%;
+
+    --popover:              47 40% 97%;
+    --popover-foreground:  165 45% 12%;
+
+    --primary:             164 86% 17%;    /* emerald #064e3b */
+    --primary-foreground:   47 42% 96%;    /* cream on emerald */
+
+    --secondary:           166 81% 26%;    /* mid emerald #0d7a5f */
+    --secondary-foreground: 47 42% 96%;
+
+    --muted:                47 30% 87%;    /* slightly deeper cream */
+    --muted-foreground:    165 25% 40%;
+
+    --accent:               43 53% 54%;    /* gold #c9a84c */
+    --accent-foreground:   165 45% 10%;
+
+    --destructive:           0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border:               47 20% 82%;    /* warm neutral */
+    --input:                47 20% 82%;
+    --ring:                164 86% 17%;    /* emerald focus ring */
+
+    --radius: 0.5rem;
+
+    /* ── Design tokens ──────────────────────────────────────────────────── */
+    --gradient-emerald: linear-gradient(
+      135deg,
+      hsl(164 86% 17%),
+      hsl(166 81% 26%)
+    );
+    --shadow-folio:
+      0 2px 8px 0 hsl(165 45% 12% / 0.08),
+      0 1px 2px 0 hsl(165 45% 12% / 0.04);
+  }
+
+  .dark {
+    --background:          165 50%  6%;    /* very dark emerald */
+    --foreground:           47 42% 92%;    /* cream text */
+
+    --card:                165 48%  9%;
+    --card-foreground:      47 42% 92%;
+
+    --popover:             165 48%  9%;
+    --popover-foreground:   47 42% 92%;
+
+    --primary:             164 55% 50%;    /* bright emerald */
+    --primary-foreground:  165 50%  6%;
+
+    --secondary:           165 30% 20%;
+    --secondary-foreground: 47 42% 92%;
+
+    --muted:               165 30% 14%;
+    --muted-foreground:    165 20% 60%;
+
+    --accent:               43 53% 54%;    /* same gold */
+    --accent-foreground:   165 50%  6%;
+
+    --destructive:           0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border:              165 30% 18%;
+    --input:               165 30% 18%;
+    --ring:                164 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  /* Display face on all headings — set per element in components when needed */
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: animateIn 0.3s ease-in-out;
+  }
+
+  .animate-out {
+    animation: animateOut 0.3s ease-in-out;
+  }
+
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animateOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/20;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/30;
+}
